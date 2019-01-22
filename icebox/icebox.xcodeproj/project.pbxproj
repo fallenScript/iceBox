@@ -7,6 +7,7 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		1E33164A21F7B36D00DF836B /* RegisterViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1E33164921F7B36D00DF836B /* RegisterViewController.swift */; };
 		1E9D663921F23F9C0081AADF /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1E9D663821F23F9C0081AADF /* AppDelegate.swift */; };
 		1E9D663B21F23F9C0081AADF /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1E9D663A21F23F9C0081AADF /* ViewController.swift */; };
 		1E9D663E21F23F9D0081AADF /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 1E9D663C21F23F9C0081AADF /* Main.storyboard */; };
@@ -16,9 +17,11 @@
 		1E9D664D21F240B00081AADF /* FreezerModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1E9D664C21F240B00081AADF /* FreezerModel.swift */; };
 		1ED4275021F424AC00578DCB /* DetailViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1ED4274F21F424AC00578DCB /* DetailViewController.swift */; };
 		1ED4278021F44C3400578DCB /* UserViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1ED4277F21F44C3400578DCB /* UserViewController.swift */; };
+		5A80B6BE0D4D2A5ACE93AE85 /* Pods_icebox.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 7201EBA6C64A8E8977CCDCEC /* Pods_icebox.framework */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
+		1E33164921F7B36D00DF836B /* RegisterViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RegisterViewController.swift; sourceTree = "<group>"; };
 		1E9D663521F23F9C0081AADF /* icebox.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = icebox.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		1E9D663821F23F9C0081AADF /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		1E9D663A21F23F9C0081AADF /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
@@ -30,6 +33,9 @@
 		1E9D664C21F240B00081AADF /* FreezerModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FreezerModel.swift; sourceTree = "<group>"; };
 		1ED4274F21F424AC00578DCB /* DetailViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DetailViewController.swift; sourceTree = "<group>"; };
 		1ED4277F21F44C3400578DCB /* UserViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UserViewController.swift; sourceTree = "<group>"; };
+		5A607C05591A87F67488286D /* Pods-icebox.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-icebox.debug.xcconfig"; path = "Pods/Target Support Files/Pods-icebox/Pods-icebox.debug.xcconfig"; sourceTree = "<group>"; };
+		7201EBA6C64A8E8977CCDCEC /* Pods_icebox.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_icebox.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		A4AB42E6819BC658FCBE89B0 /* Pods-icebox.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-icebox.release.xcconfig"; path = "Pods/Target Support Files/Pods-icebox/Pods-icebox.release.xcconfig"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -37,6 +43,7 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				5A80B6BE0D4D2A5ACE93AE85 /* Pods_icebox.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -48,6 +55,8 @@
 			children = (
 				1E9D663721F23F9C0081AADF /* icebox */,
 				1E9D663621F23F9C0081AADF /* Products */,
+				691A67958C23AB8D55239094 /* Pods */,
+				5A63317BFB032E4388F4CE46 /* Frameworks */,
 			);
 			sourceTree = "<group>";
 		};
@@ -72,8 +81,26 @@
 				1E9D664C21F240B00081AADF /* FreezerModel.swift */,
 				1ED4274F21F424AC00578DCB /* DetailViewController.swift */,
 				1E9D664421F23FA10081AADF /* Info.plist */,
+				1E33164921F7B36D00DF836B /* RegisterViewController.swift */,
 			);
 			path = icebox;
+			sourceTree = "<group>";
+		};
+		5A63317BFB032E4388F4CE46 /* Frameworks */ = {
+			isa = PBXGroup;
+			children = (
+				7201EBA6C64A8E8977CCDCEC /* Pods_icebox.framework */,
+			);
+			name = Frameworks;
+			sourceTree = "<group>";
+		};
+		691A67958C23AB8D55239094 /* Pods */ = {
+			isa = PBXGroup;
+			children = (
+				5A607C05591A87F67488286D /* Pods-icebox.debug.xcconfig */,
+				A4AB42E6819BC658FCBE89B0 /* Pods-icebox.release.xcconfig */,
+			);
+			name = Pods;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -83,9 +110,11 @@
 			isa = PBXNativeTarget;
 			buildConfigurationList = 1E9D664721F23FA10081AADF /* Build configuration list for PBXNativeTarget "icebox" */;
 			buildPhases = (
+				909AB4A4EAAED84C66CF9B33 /* [CP] Check Pods Manifest.lock */,
 				1E9D663121F23F9C0081AADF /* Sources */,
 				1E9D663221F23F9C0081AADF /* Frameworks */,
 				1E9D663321F23F9C0081AADF /* Resources */,
+				958935D7715CEEE1EAFCEBF7 /* [CP] Embed Pods Frameworks */,
 			);
 			buildRules = (
 			);
@@ -142,6 +171,53 @@
 		};
 /* End PBXResourcesBuildPhase section */
 
+/* Begin PBXShellScriptBuildPhase section */
+		909AB4A4EAAED84C66CF9B33 /* [CP] Check Pods Manifest.lock */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputFileListPaths = (
+			);
+			inputPaths = (
+				"${PODS_PODFILE_DIR_PATH}/Podfile.lock",
+				"${PODS_ROOT}/Manifest.lock",
+			);
+			name = "[CP] Check Pods Manifest.lock";
+			outputFileListPaths = (
+			);
+			outputPaths = (
+				"$(DERIVED_FILE_DIR)/Pods-icebox-checkManifestLockResult.txt",
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "diff \"${PODS_PODFILE_DIR_PATH}/Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [ $? != 0 ] ; then\n    # print error to STDERR\n    echo \"error: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\" >&2\n    exit 1\nfi\n# This output is used by Xcode 'outputs' to avoid re-running this script phase.\necho \"SUCCESS\" > \"${SCRIPT_OUTPUT_FILE_0}\"\n";
+			showEnvVarsInLog = 0;
+		};
+		958935D7715CEEE1EAFCEBF7 /* [CP] Embed Pods Frameworks */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputFileListPaths = (
+			);
+			inputPaths = (
+				"${SRCROOT}/Pods/Target Support Files/Pods-icebox/Pods-icebox-frameworks.sh",
+				"${BUILT_PRODUCTS_DIR}/Alamofire/Alamofire.framework",
+			);
+			name = "[CP] Embed Pods Frameworks";
+			outputFileListPaths = (
+			);
+			outputPaths = (
+				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/Alamofire.framework",
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"${SRCROOT}/Pods/Target Support Files/Pods-icebox/Pods-icebox-frameworks.sh\"\n";
+			showEnvVarsInLog = 0;
+		};
+/* End PBXShellScriptBuildPhase section */
+
 /* Begin PBXSourcesBuildPhase section */
 		1E9D663121F23F9C0081AADF /* Sources */ = {
 			isa = PBXSourcesBuildPhase;
@@ -149,6 +225,7 @@
 			files = (
 				1E9D664D21F240B00081AADF /* FreezerModel.swift in Sources */,
 				1ED4278021F44C3400578DCB /* UserViewController.swift in Sources */,
+				1E33164A21F7B36D00DF836B /* RegisterViewController.swift in Sources */,
 				1E9D663B21F23F9C0081AADF /* ViewController.swift in Sources */,
 				1ED4275021F424AC00578DCB /* DetailViewController.swift in Sources */,
 				1E9D663921F23F9C0081AADF /* AppDelegate.swift in Sources */,
@@ -296,6 +373,7 @@
 		};
 		1E9D664821F23FA10081AADF /* Debug */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = 5A607C05591A87F67488286D /* Pods-icebox.debug.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				CODE_SIGN_STYLE = Automatic;
@@ -314,6 +392,7 @@
 		};
 		1E9D664921F23FA10081AADF /* Release */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = A4AB42E6819BC658FCBE89B0 /* Pods-icebox.release.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				CODE_SIGN_STYLE = Automatic;
