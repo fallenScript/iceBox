@@ -7,16 +7,24 @@
 //
 
 import UIKit
+import PushNotifications
 
 @UIApplicationMain
 class AppDelegate: UIResponder, UIApplicationDelegate {
 
     var window: UIWindow?
-
+    let pushNotifications = PushNotifications.shared
 
     func application(_ application: UIApplication, didFinishLaunchingWithOptions launchOptions: [UIApplication.LaunchOptionsKey: Any]?) -> Bool {
+        Thread.sleep(forTimeInterval: 1)
+        pushNotifications.start(instanceId: AppConstants.BEAMS_INSTANCE_ID)
+        pushNotifications.registerForRemoteNotifications()
         // Override point for customization after application launch.
         return true
+    }
+    
+    func application(_ application: UIApplication, didRegisterForRemoteNotificationsWithDeviceToken deviceToken: Data) {
+        pushNotifications.registerDeviceToken(deviceToken)
     }
 
     func applicationWillResignActive(_ application: UIApplication) {

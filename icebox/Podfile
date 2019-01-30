@@ -4,4 +4,9 @@
 target 'icebox' do
  use_frameworks!
  pod 'Alamofire', '~> 4.3'
+ pod 'Charts'
+ pod 'ChartsRealm'
+ pod 'PusherSwift'
+ pod 'PushNotifications'
+ pod 'NotificationBannerSwift'
 end

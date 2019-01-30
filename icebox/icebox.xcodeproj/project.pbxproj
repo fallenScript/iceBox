@@ -15,8 +15,15 @@
 		1E9D664321F23FA10081AADF /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 1E9D664121F23FA10081AADF /* LaunchScreen.storyboard */; };
 		1E9D664B21F240880081AADF /* HomeModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1E9D664A21F240880081AADF /* HomeModel.swift */; };
 		1E9D664D21F240B00081AADF /* FreezerModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1E9D664C21F240B00081AADF /* FreezerModel.swift */; };
+		1EA5CAF121FB98430085ADE8 /* STNotificationSettings.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1EA5CAF021FB98430085ADE8 /* STNotificationSettings.swift */; };
+		1EA5CAF321FB99430085ADE8 /* StocksTableViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1EA5CAF221FB99430085ADE8 /* StocksTableViewController.swift */; };
+		1EA5CAF521FB9BF80085ADE8 /* AppConstants.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1EA5CAF421FB9BF80085ADE8 /* AppConstants.swift */; };
+		1EA5CAF721FB9D4C0085ADE8 /* Stocks.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1EA5CAF621FB9D4C0085ADE8 /* Stocks.swift */; };
+		1EA5CAF921FB9EAB0085ADE8 /* StockCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 1EA5CAF821FB9EAB0085ADE8 /* StockCell.xib */; };
+		1EA5CAFB21FB9F420085ADE8 /* StockCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1EA5CAFA21FB9F420085ADE8 /* StockCell.swift */; };
 		1ED4275021F424AC00578DCB /* DetailViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1ED4274F21F424AC00578DCB /* DetailViewController.swift */; };
 		1ED4278021F44C3400578DCB /* UserViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1ED4277F21F44C3400578DCB /* UserViewController.swift */; };
+		1EFAD34C21FCE3ED006D7FE3 /* SettingsViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1EFAD34B21FCE3ED006D7FE3 /* SettingsViewController.swift */; };
 		5A80B6BE0D4D2A5ACE93AE85 /* Pods_icebox.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 7201EBA6C64A8E8977CCDCEC /* Pods_icebox.framework */; };
 /* End PBXBuildFile section */
 
@@ -31,8 +38,15 @@
 		1E9D664421F23FA10081AADF /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		1E9D664A21F240880081AADF /* HomeModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HomeModel.swift; sourceTree = "<group>"; };
 		1E9D664C21F240B00081AADF /* FreezerModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FreezerModel.swift; sourceTree = "<group>"; };
+		1EA5CAF021FB98430085ADE8 /* STNotificationSettings.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = STNotificationSettings.swift; sourceTree = "<group>"; };
+		1EA5CAF221FB99430085ADE8 /* StocksTableViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = StocksTableViewController.swift; sourceTree = "<group>"; };
+		1EA5CAF421FB9BF80085ADE8 /* AppConstants.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppConstants.swift; sourceTree = "<group>"; };
+		1EA5CAF621FB9D4C0085ADE8 /* Stocks.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Stocks.swift; sourceTree = "<group>"; };
+		1EA5CAF821FB9EAB0085ADE8 /* StockCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = StockCell.xib; sourceTree = "<group>"; };
+		1EA5CAFA21FB9F420085ADE8 /* StockCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = StockCell.swift; sourceTree = "<group>"; };
 		1ED4274F21F424AC00578DCB /* DetailViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DetailViewController.swift; sourceTree = "<group>"; };
 		1ED4277F21F44C3400578DCB /* UserViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UserViewController.swift; sourceTree = "<group>"; };
+		1EFAD34B21FCE3ED006D7FE3 /* SettingsViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SettingsViewController.swift; sourceTree = "<group>"; };
 		5A607C05591A87F67488286D /* Pods-icebox.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-icebox.debug.xcconfig"; path = "Pods/Target Support Files/Pods-icebox/Pods-icebox.debug.xcconfig"; sourceTree = "<group>"; };
 		7201EBA6C64A8E8977CCDCEC /* Pods_icebox.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_icebox.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		A4AB42E6819BC658FCBE89B0 /* Pods-icebox.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-icebox.release.xcconfig"; path = "Pods/Target Support Files/Pods-icebox/Pods-icebox.release.xcconfig"; sourceTree = "<group>"; };
@@ -71,19 +85,42 @@
 		1E9D663721F23F9C0081AADF /* icebox */ = {
 			isa = PBXGroup;
 			children = (
+				1EFAD34A21FCB712006D7FE3 /* Controllers */,
+				1EFAD34921FCB701006D7FE3 /* Models */,
 				1E9D663821F23F9C0081AADF /* AppDelegate.swift */,
-				1E9D663A21F23F9C0081AADF /* ViewController.swift */,
-				1ED4277F21F44C3400578DCB /* UserViewController.swift */,
 				1E9D663C21F23F9C0081AADF /* Main.storyboard */,
 				1E9D663F21F23FA10081AADF /* Assets.xcassets */,
 				1E9D664121F23FA10081AADF /* LaunchScreen.storyboard */,
-				1E9D664A21F240880081AADF /* HomeModel.swift */,
-				1E9D664C21F240B00081AADF /* FreezerModel.swift */,
-				1ED4274F21F424AC00578DCB /* DetailViewController.swift */,
 				1E9D664421F23FA10081AADF /* Info.plist */,
-				1E33164921F7B36D00DF836B /* RegisterViewController.swift */,
+				1EA5CAF821FB9EAB0085ADE8 /* StockCell.xib */,
 			);
 			path = icebox;
+			sourceTree = "<group>";
+		};
+		1EFAD34921FCB701006D7FE3 /* Models */ = {
+			isa = PBXGroup;
+			children = (
+				1EA5CAF421FB9BF80085ADE8 /* AppConstants.swift */,
+				1E9D664A21F240880081AADF /* HomeModel.swift */,
+				1EA5CAF021FB98430085ADE8 /* STNotificationSettings.swift */,
+				1E9D664C21F240B00081AADF /* FreezerModel.swift */,
+				1EA5CAF621FB9D4C0085ADE8 /* Stocks.swift */,
+			);
+			path = Models;
+			sourceTree = "<group>";
+		};
+		1EFAD34A21FCB712006D7FE3 /* Controllers */ = {
+			isa = PBXGroup;
+			children = (
+				1E9D663A21F23F9C0081AADF /* ViewController.swift */,
+				1ED4277F21F44C3400578DCB /* UserViewController.swift */,
+				1ED4274F21F424AC00578DCB /* DetailViewController.swift */,
+				1E33164921F7B36D00DF836B /* RegisterViewController.swift */,
+				1EA5CAF221FB99430085ADE8 /* StocksTableViewController.swift */,
+				1EA5CAFA21FB9F420085ADE8 /* StockCell.swift */,
+				1EFAD34B21FCE3ED006D7FE3 /* SettingsViewController.swift */,
+			);
+			path = Controllers;
 			sourceTree = "<group>";
 		};
 		5A63317BFB032E4388F4CE46 /* Frameworks */ = {
@@ -165,6 +202,7 @@
 			files = (
 				1E9D664321F23FA10081AADF /* LaunchScreen.storyboard in Resources */,
 				1E9D664021F23FA10081AADF /* Assets.xcassets in Resources */,
+				1EA5CAF921FB9EAB0085ADE8 /* StockCell.xib in Resources */,
 				1E9D663E21F23F9D0081AADF /* Main.storyboard in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -204,12 +242,38 @@
 			inputPaths = (
 				"${SRCROOT}/Pods/Target Support Files/Pods-icebox/Pods-icebox-frameworks.sh",
 				"${BUILT_PRODUCTS_DIR}/Alamofire/Alamofire.framework",
+				"${BUILT_PRODUCTS_DIR}/Charts/Charts.framework",
+				"${BUILT_PRODUCTS_DIR}/ChartsRealm/ChartsRealm.framework",
+				"${BUILT_PRODUCTS_DIR}/CryptoSwift/CryptoSwift.framework",
+				"${BUILT_PRODUCTS_DIR}/MarqueeLabel/MarqueeLabel.framework",
+				"${BUILT_PRODUCTS_DIR}/NotificationBannerSwift/NotificationBannerSwift.framework",
+				"${BUILT_PRODUCTS_DIR}/PushNotifications/PushNotifications.framework",
+				"${BUILT_PRODUCTS_DIR}/PusherSwift/PusherSwift.framework",
+				"${BUILT_PRODUCTS_DIR}/ReachabilitySwift/Reachability.framework",
+				"${BUILT_PRODUCTS_DIR}/Realm/Realm.framework",
+				"${BUILT_PRODUCTS_DIR}/RealmSwift/RealmSwift.framework",
+				"${BUILT_PRODUCTS_DIR}/SnapKit/SnapKit.framework",
+				"${BUILT_PRODUCTS_DIR}/Starscream/Starscream.framework",
+				"${BUILT_PRODUCTS_DIR}/TaskQueue/TaskQueue.framework",
 			);
 			name = "[CP] Embed Pods Frameworks";
 			outputFileListPaths = (
 			);
 			outputPaths = (
 				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/Alamofire.framework",
+				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/Charts.framework",
+				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/ChartsRealm.framework",
+				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/CryptoSwift.framework",
+				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/MarqueeLabel.framework",
+				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/NotificationBannerSwift.framework",
+				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/PushNotifications.framework",
+				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/PusherSwift.framework",
+				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/Reachability.framework",
+				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/Realm.framework",
+				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/RealmSwift.framework",
+				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/SnapKit.framework",
+				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/Starscream.framework",
+				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/TaskQueue.framework",
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 			shellPath = /bin/sh;
@@ -225,11 +289,17 @@
 			files = (
 				1E9D664D21F240B00081AADF /* FreezerModel.swift in Sources */,
 				1ED4278021F44C3400578DCB /* UserViewController.swift in Sources */,
+				1EA5CAF321FB99430085ADE8 /* StocksTableViewController.swift in Sources */,
 				1E33164A21F7B36D00DF836B /* RegisterViewController.swift in Sources */,
 				1E9D663B21F23F9C0081AADF /* ViewController.swift in Sources */,
 				1ED4275021F424AC00578DCB /* DetailViewController.swift in Sources */,
 				1E9D663921F23F9C0081AADF /* AppDelegate.swift in Sources */,
+				1EA5CAF721FB9D4C0085ADE8 /* Stocks.swift in Sources */,
+				1EA5CAF121FB98430085ADE8 /* STNotificationSettings.swift in Sources */,
 				1E9D664B21F240880081AADF /* HomeModel.swift in Sources */,
+				1EFAD34C21FCE3ED006D7FE3 /* SettingsViewController.swift in Sources */,
+				1EA5CAF521FB9BF80085ADE8 /* AppConstants.swift in Sources */,
+				1EA5CAFB21FB9F420085ADE8 /* StockCell.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
