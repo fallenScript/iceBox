@@ -11,17 +11,12 @@ import Charts
 
 class DetailViewController: UIViewController {
     @IBOutlet weak var lineChart: LineChartView!
-    
-    @IBAction func button(_ sender: UIButton) {
-        let count = Int(arc4random_uniform(20) + 3)
-        setChartValues(count)
-    }
-    
+
     override func viewDidLoad() {
         super.viewDidLoad()
         setChartValues()
         
-        let maximumTemp = ChartLimitLine(limit: -40, label: "Maximum temp")
+        let maximumTemp = ChartLimitLine(limit: -63, label: "Maximum temp")
         maximumTemp.lineWidth = 4
         maximumTemp.lineDashLengths = [5, 5]
         maximumTemp.labelPosition = .rightTop
@@ -29,7 +24,7 @@ class DetailViewController: UIViewController {
         maximumTemp.valueTextColor = .black
        
         
-        let minimumTemp = ChartLimitLine(limit: -63, label: "Minimum tem")
+        let minimumTemp = ChartLimitLine(limit: -80, label: "Minimum tem")
         minimumTemp.lineWidth = 4
         minimumTemp.lineDashLengths = [5,5]
         minimumTemp.labelPosition = .rightBottom
@@ -47,9 +42,17 @@ class DetailViewController: UIViewController {
     }
     
     func setChartValues(_ count: Int = 30) {
-        let values = (0..<count).map { (i) -> ChartDataEntry in
-            var val = Double(arc4random_uniform(UInt32(count)) + 3)
-            val = val - 70
+        let temperatures =
+            [-68,-69,-68,-70,-66,-67,-68,-69,-73,-78,-70,-68,-66,-80,-66,-65,-64,-63]
+        
+        //        let values = temperatures.map { (i) -> ChartDataEntry in
+        //            let dataTemp = Double(temperatures[i])
+        //            return ChartDataEntry(x: Double(i), y: dataTemp)
+        //        }
+
+        
+        let values = (0..<temperatures.count).map { (i) -> ChartDataEntry in
+            let val = Double(temperatures[i])
             return ChartDataEntry(x: Double(i), y: val)
         }
         
