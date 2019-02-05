@@ -16,7 +16,7 @@ class StockCell: UITableViewCell {
     @IBOutlet weak var changeView: UIView!
     @IBOutlet weak var tempLabel: UILabel!
     
-    var stock: Stock? {
+    var stock: StockTable? {
         didSet {
             if let stock = stock {
                 nameLabel.text = stock.name

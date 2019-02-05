@@ -9,8 +9,8 @@
 import Foundation
 
 struct AppConstants {
-    static let ENDPOINT = "http://mirandaromo.com/service.php" // Or use your ngrok HTTPS URL
-    static let PUSHER_APP_KEY = "PASTE_PUSHER_APP_KEY_HERE"
-    static let PUSHER_APP_CLUSTER = "PASTE_PUSHER_APP_CLUSTER_HERE"
-    static let BEAMS_INSTANCE_ID = "PASTE_PUSHER_BEAMS_INSTANCE_ID_HERE"
+    static let ENDPOINT = "http://mirandaromo.com/service.php"
+    static let PUSHER_APP_KEY = "APP_KEY"
+    static let PUSHER_APP_CLUSTER = "APP_CLUSTER"
+    static let BEAMS_INSTANCE_ID = "BEAMS_INSTANCE_ID"
 }

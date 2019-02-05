@@ -13,7 +13,7 @@ import PushNotifications
 import NotificationBannerSwift
 
 class StocksTableViewController: UITableViewController {
-    var stocks: [Stock] = []
+    var stocks: [StockTable] = []
     
     var refresher: UIRefreshControl!
     var pusher: Pusher!
@@ -22,15 +22,14 @@ class StocksTableViewController: UITableViewController {
     
     override func viewDidLoad() {
         super.viewDidLoad()
-        //self.navigationItem.setHidesBackButton(true, animated: false)
+        self.navigationItem.setHidesBackButton(true, animated: false)
        
-        
         fetchStockData()
         refresher = UIRefreshControl()
-        refresher.tintColor = UIColor.white
-        refresher.attributedTitle = NSAttributedString(string: "Pull to refresh")
-        refresher.addTarget(self, action: #selector(StocksTableViewController.updateData), for: UIControl.Event.valueChanged)
-        tableView.addSubview(refresher)
+//        refresher.tintColor = UIColor.white
+//        refresher.attributedTitle = NSAttributedString(string: "Pull to refresh")
+//        refresher.addTarget(self, action: #selector(StocksTableViewController.updateData), for: UIControl.Event.valueChanged)
+//        tableView.addSubview(refresher)
         
         tableView.separatorInset.left = 0
         tableView.backgroundColor = UIColor.black
@@ -47,7 +46,7 @@ class StocksTableViewController: UITableViewController {
         let _ = channel.bind(eventName: "update") { [unowned self] data in
             if let data = data as? [[String: AnyObject]] {
                 if let encoded = try? JSONSerialization.data(withJSONObject: data, options: .prettyPrinted) {
-                    if let stocks = try? JSONDecoder().decode([Stock].self, from: encoded) {
+                    if let stocks = try? JSONDecoder().decode([StockTable].self, from: encoded) {
                         self.stocks = stocks
                         self.tableView.reloadData()
                     }
@@ -76,16 +75,16 @@ class StocksTableViewController: UITableViewController {
         
         // Manually call segue to detail view controller
         self.performSegue(withIdentifier: "DetailFreezer", sender: self)
-//        let cell = tableView.cellForRow(at: indexPath) as! StockCell
-//        if let stock = cell.stock {
-//            showNotificationSettingAlert(for: stock)
-//        }
+
+    }
+    @IBAction func reloadStocks(_ sender: UIBarButtonItem) {
+        updateData()
     }
     
     
     override func tableView(_ tableView: UITableView, editActionsForRowAt indexPath: IndexPath) -> [UITableViewRowAction]?
     {
-        let FavoriteAction = UITableViewRowAction(style: .destructive, title: "Attention") { (action, indexpath) in
+        let sendMessage = UITableViewRowAction(style: .destructive, title: "Attention") { (action, indexpath) in
            
             let alert = UIAlertController(title: "Sent", message: "message has been sent to the person in charge", preferredStyle: .alert)
             
@@ -93,43 +92,52 @@ class StocksTableViewController: UITableViewController {
            
             self.present(alert, animated: true)
         }
-        FavoriteAction.backgroundColor = .red
+        sendMessage.backgroundColor = .red
         
-        return [FavoriteAction]
+        let notifications = UITableViewRowAction(style: .default, title: "Notifications") { (action, indexpath) in
+            
+                    let cell = tableView.cellForRow(at: indexPath) as! StockCell
+                    if let stock = cell.stock {
+                        self.showNotificationSettingAlert(for: stock)
+                    }
+        }
+        notifications.backgroundColor = .purple
+        
+        return [notifications,sendMessage]
     }
     
-//    private func showNotificationSettingAlert(for stock: Stock) {
-//        let enabled = notificationSettings.enabled(for: stock.name)
-//        let title = "Notification settings"
-//        let message = "Change the notification settings for this stock. What would you like to do?"
-//
-//        let alert = UIAlertController(title: title, message: message, preferredStyle: .actionSheet)
-//
-//        let onTitle = enabled ? "Keep on" : "Turn on notifications"
-//        alert.addAction(UIAlertAction(title: onTitle, style: .default) { [unowned self] action in
-//            guard enabled == false else { return }
-//            self.notificationSettings.save(stock: stock.name, enabled: true)
-//
-//            let feedback = "Notfications turned on for \(stock.name)"
-//            StatusBarNotificationBanner(title: feedback, style: .success).show()
-//
-//            try? self.pushNotifications.subscribe(interest: stock.name.uppercased())
-//        })
-//
-//        let offTitle = enabled ? "Turn off notifications" : "Leave off"
-//        let offStyle: UIAlertActionStyle = enabled ? .destructive : .cancel
-//        alert.addAction(UIAlertAction(title: offTitle, style: offStyle) { [unowned self] action in
-//            guard enabled else { return }
-//            self.notificationSettings.save(stock: stock.name, enabled: false)
-//
-//            let feedback = "Notfications turned off for \(stock.name)"
-//            StatusBarNotificationBanner(title: feedback, style: .success).show()
-//
-//            try? self.pushNotifications.unsubscribe(interest: stock.name.uppercased())
-//        })
-//
-//        present(alert, animated: true, completion: nil)
-//    }
+    private func showNotificationSettingAlert(for stock: StockTable) {
+        let enabled = notificationSettings.enabled(for: stock.name)
+        let title = "Notification settings"
+        let message = "Change the notification settings for this freezer. What would you like to do?"
+
+        let alert = UIAlertController(title: title, message: message, preferredStyle: .actionSheet)
+
+        let onTitle = enabled ? "Keep on" : "Turn on notifications"
+        alert.addAction(UIAlertAction(title: onTitle, style: .default) { [unowned self] action in
+            guard enabled == false else { return }
+            self.notificationSettings.save(stock: stock.name, enabled: true)
+
+            let feedback = "Notfications turned on for \(stock.name)"
+            StatusBarNotificationBanner(title: feedback, style: .success).show()
+
+            try? self.pushNotifications.subscribe(interest: stock.name.uppercased())
+        })
+
+        let offTitle = enabled ? "Turn off notifications" : "Leave off"
+        let offStyle: UIAlertAction.Style = enabled ? .destructive : .cancel
+        alert.addAction(UIAlertAction(title: offTitle, style: offStyle) { [unowned self] action in
+            guard enabled else { return }
+            self.notificationSettings.save(stock: stock.name, enabled: false)
+
+            let feedback = "Notfications turned off for \(stock.name)"
+            StatusBarNotificationBanner(title: feedback, style: .success).show()
+
+            try? self.pushNotifications.unsubscribe(interest: stock.name.uppercased())
+        })
+
+        present(alert, animated: true, completion: nil)
+    }
     
     private func fetchStockData() {
         Alamofire.request(AppConstants.ENDPOINT + "/stocks")
@@ -140,7 +148,7 @@ class StocksTableViewController: UITableViewController {
                     return StatusBarNotificationBanner(title: msg, style: .danger).show()
                 }
                 
-                if let stocks = try? JSONDecoder().decode([Stock].self, from: data) {
+                if let stocks = try? JSONDecoder().decode([StockTable].self, from: data) {
                     self.stocks = stocks
                     self.tableView.reloadData()
                 }

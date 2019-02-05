@@ -11,9 +11,11 @@ import Charts
 
 class DetailViewController: UIViewController {
     @IBOutlet weak var lineChart: LineChartView!
-
+    @IBOutlet weak var statusView: UIView!
+    
     override func viewDidLoad() {
         super.viewDidLoad()
+        statusView.layer.cornerRadius = 10
         setChartValues()
         
         let maximumTemp = ChartLimitLine(limit: -63, label: "Maximum temp")

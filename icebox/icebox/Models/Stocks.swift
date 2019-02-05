@@ -8,9 +8,19 @@
 
 import Foundation
 
-struct Stock: Codable {
+struct StockTable: Codable {
     let name: String
     let temp: String
     let date: String
     let time: String
 }
+
+struct FreezerDetail {
+    let name: String
+    let location: String
+    let prot: String
+    let responsable: String
+    let tempMax: Int
+    let tempMin: Int
+}
+

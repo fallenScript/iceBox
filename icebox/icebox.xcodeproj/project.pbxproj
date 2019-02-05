@@ -9,12 +9,9 @@
 /* Begin PBXBuildFile section */
 		1E33164A21F7B36D00DF836B /* RegisterViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1E33164921F7B36D00DF836B /* RegisterViewController.swift */; };
 		1E9D663921F23F9C0081AADF /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1E9D663821F23F9C0081AADF /* AppDelegate.swift */; };
-		1E9D663B21F23F9C0081AADF /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1E9D663A21F23F9C0081AADF /* ViewController.swift */; };
 		1E9D663E21F23F9D0081AADF /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 1E9D663C21F23F9C0081AADF /* Main.storyboard */; };
 		1E9D664021F23FA10081AADF /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 1E9D663F21F23FA10081AADF /* Assets.xcassets */; };
 		1E9D664321F23FA10081AADF /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 1E9D664121F23FA10081AADF /* LaunchScreen.storyboard */; };
-		1E9D664B21F240880081AADF /* HomeModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1E9D664A21F240880081AADF /* HomeModel.swift */; };
-		1E9D664D21F240B00081AADF /* FreezerModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1E9D664C21F240B00081AADF /* FreezerModel.swift */; };
 		1EA5CAF121FB98430085ADE8 /* STNotificationSettings.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1EA5CAF021FB98430085ADE8 /* STNotificationSettings.swift */; };
 		1EA5CAF321FB99430085ADE8 /* StocksTableViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1EA5CAF221FB99430085ADE8 /* StocksTableViewController.swift */; };
 		1EA5CAF521FB9BF80085ADE8 /* AppConstants.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1EA5CAF421FB9BF80085ADE8 /* AppConstants.swift */; };
@@ -31,13 +28,10 @@
 		1E33164921F7B36D00DF836B /* RegisterViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RegisterViewController.swift; sourceTree = "<group>"; };
 		1E9D663521F23F9C0081AADF /* icebox.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = icebox.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		1E9D663821F23F9C0081AADF /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
-		1E9D663A21F23F9C0081AADF /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
 		1E9D663D21F23F9C0081AADF /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
 		1E9D663F21F23FA10081AADF /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		1E9D664221F23FA10081AADF /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		1E9D664421F23FA10081AADF /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
-		1E9D664A21F240880081AADF /* HomeModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HomeModel.swift; sourceTree = "<group>"; };
-		1E9D664C21F240B00081AADF /* FreezerModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FreezerModel.swift; sourceTree = "<group>"; };
 		1EA5CAF021FB98430085ADE8 /* STNotificationSettings.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = STNotificationSettings.swift; sourceTree = "<group>"; };
 		1EA5CAF221FB99430085ADE8 /* StocksTableViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = StocksTableViewController.swift; sourceTree = "<group>"; };
 		1EA5CAF421FB9BF80085ADE8 /* AppConstants.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppConstants.swift; sourceTree = "<group>"; };
@@ -101,9 +95,7 @@
 			isa = PBXGroup;
 			children = (
 				1EA5CAF421FB9BF80085ADE8 /* AppConstants.swift */,
-				1E9D664A21F240880081AADF /* HomeModel.swift */,
 				1EA5CAF021FB98430085ADE8 /* STNotificationSettings.swift */,
-				1E9D664C21F240B00081AADF /* FreezerModel.swift */,
 				1EA5CAF621FB9D4C0085ADE8 /* Stocks.swift */,
 			);
 			path = Models;
@@ -112,10 +104,9 @@
 		1EFAD34A21FCB712006D7FE3 /* Controllers */ = {
 			isa = PBXGroup;
 			children = (
-				1E9D663A21F23F9C0081AADF /* ViewController.swift */,
+				1E33164921F7B36D00DF836B /* RegisterViewController.swift */,
 				1ED4277F21F44C3400578DCB /* UserViewController.swift */,
 				1ED4274F21F424AC00578DCB /* DetailViewController.swift */,
-				1E33164921F7B36D00DF836B /* RegisterViewController.swift */,
 				1EA5CAF221FB99430085ADE8 /* StocksTableViewController.swift */,
 				1EA5CAFA21FB9F420085ADE8 /* StockCell.swift */,
 				1EFAD34B21FCE3ED006D7FE3 /* SettingsViewController.swift */,
@@ -287,16 +278,13 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				1E9D664D21F240B00081AADF /* FreezerModel.swift in Sources */,
 				1ED4278021F44C3400578DCB /* UserViewController.swift in Sources */,
 				1EA5CAF321FB99430085ADE8 /* StocksTableViewController.swift in Sources */,
 				1E33164A21F7B36D00DF836B /* RegisterViewController.swift in Sources */,
-				1E9D663B21F23F9C0081AADF /* ViewController.swift in Sources */,
 				1ED4275021F424AC00578DCB /* DetailViewController.swift in Sources */,
 				1E9D663921F23F9C0081AADF /* AppDelegate.swift in Sources */,
 				1EA5CAF721FB9D4C0085ADE8 /* Stocks.swift in Sources */,
 				1EA5CAF121FB98430085ADE8 /* STNotificationSettings.swift in Sources */,
-				1E9D664B21F240880081AADF /* HomeModel.swift in Sources */,
 				1EFAD34C21FCE3ED006D7FE3 /* SettingsViewController.swift in Sources */,
 				1EA5CAF521FB9BF80085ADE8 /* AppConstants.swift in Sources */,
 				1EA5CAFB21FB9F420085ADE8 /* StockCell.swift in Sources */,
@@ -449,6 +437,7 @@
 				CODE_SIGN_STYLE = Automatic;
 				DEVELOPMENT_TEAM = WS4F5RM69W;
 				INFOPLIST_FILE = icebox/Info.plist;
+				IPHONEOS_DEPLOYMENT_TARGET = 12.1;
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
 					"@executable_path/Frameworks",
@@ -468,6 +457,7 @@
 				CODE_SIGN_STYLE = Automatic;
 				DEVELOPMENT_TEAM = WS4F5RM69W;
 				INFOPLIST_FILE = icebox/Info.plist;
+				IPHONEOS_DEPLOYMENT_TARGET = 12.1;
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
 					"@executable_path/Frameworks",

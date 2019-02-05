@@ -21,9 +21,8 @@ class SettingsViewController: UIViewController {
     }
     
     @IBAction func signOffButtom(_ sender: Any) {
-        
-        let log = self.storyboard?.instantiateViewController(withIdentifier: "UserViewController") as! UserViewController
-        self.navigationController?.pushViewController(log, animated: true)
+        self.navigationController?.viewControllers.remove(at: 1)
+        self.navigationController?.viewControllers.remove(at: 1)
     }
     
 }
